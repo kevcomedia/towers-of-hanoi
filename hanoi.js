@@ -16,10 +16,10 @@ function move(disk, from, to) {
  *
  * If there are no disks, there's nothing to do.
  */
-function solve(n, from, middle, to) {
+function* solve(n, from, middle, to) {
   if (n === 0) return;
 
-  solve(n - 1, from, to, middle);
-  move(n, from, to);
-  solve(n - 1, middle, from, to);
+  yield* solve(n - 1, from, to, middle);
+  yield move(n, from, to);
+  yield* solve(n - 1, middle, from, to);
 }
