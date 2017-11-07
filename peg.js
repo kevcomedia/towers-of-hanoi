@@ -4,6 +4,7 @@ function pegComponent() {
 
   return {
     initialize(diskCount) {
+      peg.innerHTML = '';
       for (let i = 0; i < diskCount; i++) {
         const disk = document.createElement('div');
         disk.classList.add('disk', `disk-${i}`);

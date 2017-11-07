@@ -1,4 +1,7 @@
 const $towers = document.querySelector('#towers');
+const $diskCount = document.querySelector('#disks');
+
+let isRunning = false;
 
 const pegs = {
   start: pegComponent(),
@@ -11,3 +14,9 @@ for (const p in pegs) {
 }
 
 pegs.start.initialize(5);
+
+$diskCount.addEventListener('change', function() {
+  if (isRunning) return;
+
+  pegs.start.initialize(this.value);
+});
