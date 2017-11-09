@@ -35,7 +35,9 @@ $start.addEventListener('click', function() {
   pegs.middle.reset();
   pegs.right.reset();
 
-  const it = hanoi($diskCount.value);
+  const toh = new TowersOfHanoi();
+  toh.initialize($diskCount.value);
+  const it = solve(toh);
   const intervalId = setInterval(function() {
     const step = it.next();
     if (step.done) {
