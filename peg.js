@@ -3,12 +3,10 @@ function pegComponent() {
   peg.classList.add('peg');
 
   return {
-    initialize(diskCount) {
+    initialize(diskComponents) {
       peg.innerHTML = '';
-      for (let i = 0; i < diskCount; i++) {
-        const disk = document.createElement('div');
-        disk.classList.add('disk', `disk-${i}`);
-        peg.appendChild(disk);
+      for (let i = 0; i < diskComponents.length; i++) {
+        peg.appendChild(diskComponents[i]);
       }
     },
     pushDisk(disk) {
