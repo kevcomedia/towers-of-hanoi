@@ -7,7 +7,7 @@ function move(disk, from, to) {
   }
 
   to.values.push(from.values.pop());
-  return {disk, to: to.name};
+  return {disk, from: from.name, to: to.name};
 }
 
 /* To solve a set of n disks, we solve for the set of n - 1 disks (with the
