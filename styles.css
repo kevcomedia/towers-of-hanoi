@@ -24,44 +24,44 @@ body {
   margin: 0 auto;
   height: 26.6666666667px; }
 
-.disk-0 {
+#disk-1 {
   background-color: red;
-  width: 10%; }
-
-.disk-1 {
-  background-color: #ff3300;
   width: 18.8888888889%; }
 
-.disk-2 {
-  background-color: #ff6600;
+#disk-2 {
+  background-color: #ff3300;
   width: 27.7777777778%; }
 
-.disk-3 {
-  background-color: #ff9900;
+#disk-3 {
+  background-color: #ff6600;
   width: 36.6666666667%; }
 
-.disk-4 {
-  background-color: #ffcc00;
+#disk-4 {
+  background-color: #ff9900;
   width: 45.5555555556%; }
 
-.disk-5 {
-  background-color: yellow;
+#disk-5 {
+  background-color: #ffcc00;
   width: 54.4444444444%; }
 
-.disk-6 {
-  background-color: #bfff00;
+#disk-6 {
+  background-color: yellow;
   width: 63.3333333333%; }
 
-.disk-7 {
-  background-color: #80ff00;
+#disk-7 {
+  background-color: #bfff00;
   width: 72.2222222222%; }
 
-.disk-8 {
-  background-color: #40ff00;
+#disk-8 {
+  background-color: #80ff00;
   width: 81.1111111111%; }
 
-.disk-9 {
-  background-color: lime;
+#disk-9 {
+  background-color: #40ff00;
   width: 90%; }
+
+#disk-10 {
+  background-color: lime;
+  width: 98.8888888889%; }
 
 /*# sourceMappingURL=styles.css.map */
