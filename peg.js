@@ -9,6 +9,9 @@ function pegComponent() {
         peg.appendChild(diskComponents[i]);
       }
     },
+    reset() {
+      peg.innerHTML = '';
+    },
     pushDisk(disk) {
       peg.insertBefore(disk, peg.firstChild);
     },
