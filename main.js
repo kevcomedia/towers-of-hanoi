@@ -11,29 +11,31 @@ const pegs = {
   left: pegComponent(),
   middle: pegComponent(),
   right: pegComponent(),
+  reset(diskStore, count) {
+    this.left.initialize(diskStore.getDiskComponents(count));
+    this.middle.reset();
+    this.right.reset();
+  },
+  attachTo($towers) {
+    this.left.attachTo($towers);
+    this.middle.attachTo($towers);
+    this.right.attachTo($towers);
+  }
 };
 
-for (const p in pegs) {
-  pegs[p].attachTo($towers);
-}
-
-pegs.left.initialize(store.getDiskComponents(5));
+pegs.attachTo($towers);
+pegs.reset(store, $diskCount.value);
 
 $diskCount.addEventListener('change', function() {
   if (isRunning) return;
-
-  pegs.left.initialize(store.getDiskComponents(this.value));
-  pegs.middle.reset();
-  pegs.right.reset();
+  pegs.reset(store, $diskCount.value);
 });
 
 $start.addEventListener('click', function() {
   if (isRunning) return;
   isRunning = true;
 
-  pegs.left.initialize(store.getDiskComponents($diskCount.value));
-  pegs.middle.reset();
-  pegs.right.reset();
+  pegs.reset(store, $diskCount.value);
 
   const toh = new TowersOfHanoi();
   toh.initialize($diskCount.value);
